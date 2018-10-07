@@ -1,6 +1,8 @@
-import { Patient, ClinicalTrial } from "../main/trial";
+import { ClinicalTrial } from "../main/models/trial";
+import { Patient } from "../main/models/patient";
 
 describe("ClinicalTrial unit tests", () => {
+  // Normal patient
   describe("No particular disease", () => {
     it("should decrease value and surgeryIn", () => {
       expect(
@@ -28,6 +30,8 @@ describe("ClinicalTrial unit tests", () => {
     });
   });
 
+
+  // Multiple sclerosis patient
   describe("Multiple sclerosis disease", () => {
     it("should increase before surgery", () => {
       expect(
@@ -48,6 +52,8 @@ describe("ClinicalTrial unit tests", () => {
     });
   });
 
+
+  // Pancreatic cancer patient
   describe("Pancreatic cancer", () => {
     it("should stay similar", () => {
       expect(
@@ -56,6 +62,8 @@ describe("ClinicalTrial unit tests", () => {
     });
   });
 
+
+  // Chronic obstructive pulmonary disease patient
   describe("Chronic obstructive pulmonary disease", () => {
     it("should increase before surgery in more than ten days", () => {
       expect(
@@ -94,6 +102,8 @@ describe("ClinicalTrial unit tests", () => {
     });
   });
 
+
+  // Hepatocellular carcinoma patient
   describe("Hepatocellular carcinoma", () => {
     it("should decrease value two times before surgery", () => {
       expect(

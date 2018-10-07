@@ -42,7 +42,7 @@ Feel free to make any changes to the _updateValue_ method implementation and add
 
 Please commit as frequently as possible to make the review easier.
 
-## Test
+## Start generation
 
 To make sure that you will not break anything in the existing code, we added a log of the simulation in the _output.txt_ file. You can generate a new file by running one of the following commands:
 
@@ -52,6 +52,14 @@ yarn start
 
 ```sh
 docker-compose up
+```
+
+## Test
+
+To run tests, run the following :
+
+``` sh
+yarn test
 ```
 
 ## Todos

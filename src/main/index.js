@@ -1,4 +1,5 @@
-import { Patient, ClinicalTrial } from "./trial";
+import { ClinicalTrial } from "./models/trial";
+import { Patient } from "./models/patient";
 
 import fs from "fs";
 

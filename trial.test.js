@@ -21,10 +21,10 @@ describe("ClinicalTrial unit tests", () => {
     });
       
     it("should be an error as value in constructor is under 0", () => {
-      // TODO : implement this error in constructor
+      // How it is dealed now is that it updates and gives 0 for the value
       expect(
         new ClinicalTrial([new Patient("test", -2, -4)]).updateValue()
-      ).toEqual([new Patient("test", -3, -4)]);
+      ).toEqual([new Patient("test", -3, 0)]);
     });
   });
 

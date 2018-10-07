@@ -19,6 +19,13 @@ describe("ClinicalTrial unit tests", () => {
         new ClinicalTrial([new Patient("test", -2, 0)]).updateValue()
       ).toEqual([new Patient("test", -3, 0)]);
     });
+      
+    it("should be an error as value in constructor is under 0", () => {
+      // TODO : implement this error in constructor
+      expect(
+        new ClinicalTrial([new Patient("test", -2, -4)]).updateValue()
+      ).toEqual([new Patient("test", -3, -4)]);
+    });
   });
 
   describe("Multiple sclerosis disease", () => {

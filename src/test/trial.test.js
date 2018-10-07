@@ -1,4 +1,4 @@
-import { Patient, ClinicalTrial } from "./trial";
+import { Patient, ClinicalTrial } from "../main/trial";
 
 describe("ClinicalTrial unit tests", () => {
   describe("No particular disease", () => {

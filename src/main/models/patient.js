@@ -40,7 +40,7 @@ export class SclerosisPatient extends Patient {
       this.value += 2;
     }
     this.surgeryIn--;
-  }  
+  }
 }
 
 /**
@@ -48,8 +48,7 @@ export class SclerosisPatient extends Patient {
  *  @extends Patient
  */
 export class PancreaticPatient extends Patient {
-  update() {
-  }
+  update() {}
 }
 
 /**
@@ -74,7 +73,7 @@ export class PulmonaryPatient extends Patient {
 }
 
 /**
- *  Class representing a patient with Hepatocellular carcinoma 
+ *  Class representing a patient with Hepatocellular carcinoma
  *  @extends Patient
  */
 export class CarcinomaPatient extends Patient {

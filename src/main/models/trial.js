@@ -1,5 +1,10 @@
-import { Patient, NormalPatient, PancreaticPatient, 
-  PulmonaryPatient, CarcinomaPatient, SclerosisPatient } from "./patient";
+import {
+  NormalPatient,
+  PancreaticPatient,
+  PulmonaryPatient,
+  CarcinomaPatient,
+  SclerosisPatient
+} from "./patient";
 
 /**
  *  Class representing a clinical trial
@@ -8,21 +13,51 @@ export class ClinicalTrial {
   constructor(patients = []) {
     this.patients = [];
     for (var i = 0; i < patients.length; i++) {
-      switch(patients[i].disease) {
+      switch (patients[i].disease) {
         case "Multiple sclerosis":
-          this.patients.push(new SclerosisPatient(patients[i].disease, patients[i].surgeryIn, patients[i].value));
+          this.patients.push(
+            new SclerosisPatient(
+              patients[i].disease,
+              patients[i].surgeryIn,
+              patients[i].value
+            )
+          );
           break;
         case "Pancreatic cancer":
-          this.patients.push(new PancreaticPatient(patients[i].disease, patients[i].surgeryIn, patients[i].value));
+          this.patients.push(
+            new PancreaticPatient(
+              patients[i].disease,
+              patients[i].surgeryIn,
+              patients[i].value
+            )
+          );
           break;
         case "Chronic obstructive pulmonary disease":
-          this.patients.push(new PulmonaryPatient(patients[i].disease, patients[i].surgeryIn, patients[i].value));
+          this.patients.push(
+            new PulmonaryPatient(
+              patients[i].disease,
+              patients[i].surgeryIn,
+              patients[i].value
+            )
+          );
           break;
         case "Hepatocellular carcinoma":
-          this.patients.push(new CarcinomaPatient(patients[i].disease, patients[i].surgeryIn, patients[i].value));
+          this.patients.push(
+            new CarcinomaPatient(
+              patients[i].disease,
+              patients[i].surgeryIn,
+              patients[i].value
+            )
+          );
           break;
         default:
-          this.patients.push(new NormalPatient(patients[i].disease, patients[i].surgeryIn, patients[i].value));
+          this.patients.push(
+            new NormalPatient(
+              patients[i].disease,
+              patients[i].surgeryIn,
+              patients[i].value
+            )
+          );
       }
     }
   }

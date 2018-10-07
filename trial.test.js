@@ -93,4 +93,30 @@ describe("ClinicalTrial unit tests", () => {
       ).toEqual([new Patient("Chronic obstructive pulmonary disease", 3, 50)]);
     });
   });
+
+  describe("Hepatocellular carcinoma", () => {
+    it("should decrease value two times before surgery", () => {
+      expect(
+        new ClinicalTrial([new Patient("Hepatocellular carcinoma", 2, 4)]).updateValue()
+      ).toEqual([new Patient("Hepatocellular carcinoma", 1, 2)]);
+    });
+
+    it("should decrease value four times after surgery", () => {
+      expect(
+        new ClinicalTrial([new Patient("Hepatocellular carcinoma", -2, 6)]).updateValue()
+      ).toEqual([new Patient("Hepatocellular carcinoma", -3, 2)]);
+    });
+
+    it("should decrease until value reach 0 before surgery", () => {
+      expect(
+        new ClinicalTrial([new Patient("Hepatocellular carcinoma", 3, 1)]).updateValue()
+      ).toEqual([new Patient("Hepatocellular carcinoma", 2, 0)]);
+    });   
+    
+    it("should decrease until value reach 0 after surgery", () => {
+      expect(
+        new ClinicalTrial([new Patient("Hepatocellular carcinoma", -2, 3)]).updateValue()
+      ).toEqual([new Patient("Hepatocellular carcinoma", -3, 0)]);
+    });
+  });
 });

@@ -51,6 +51,16 @@ export class ClinicalTrial {
     return patient; 
   }
 
+  updateCarcinoma(patient) {
+    if (patient.surgeryIn >= 1) {
+      patient.value -= 2;
+    } else {
+      patient.value -= 4;
+    }
+    patient.surgeryIn--;
+    return patient;
+  }
+
   rectifyValue(patient) {
     if (patient.value < 0) {
       patient.value = 0;
@@ -71,6 +81,9 @@ export class ClinicalTrial {
           break;
         case "Chronic obstructive pulmonary disease":
           this.patients[i] = this.updatePulmonaryPatient(this.patients[i]);
+          break;
+        case "Hepatocellular carcinoma":
+          this.patients[i] = this.updateCarcinoma(this.patients[i]);
           break;
         default:
           this.patients[i] = this.updateNormalPatient(this.patients[i]);

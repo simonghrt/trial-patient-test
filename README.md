@@ -53,3 +53,13 @@ yarn start
 ```sh
 docker-compose up
 ```
+
+## Todos
+
+An ordered list of the different steps we'll need to do
+
+* Add unit tests inside the trial.test.js
+* Change the folders structure (src, model, controller)
+* Separate the code of the update
+* Implement the new feature
+* Change output.txt to JSON file and use it in the test
